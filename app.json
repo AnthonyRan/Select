@@ -1,0 +1,54 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/func/func",
+    "pages/mine/mine",
+    "pages/func/select/select",
+    "pages/func/select2/select2",
+    "pages/func/turntable/turntable",
+    "pages/func/turntable/index/index",
+    "pages/func/turntable/list/list",
+    "pages/func/turntable/edit/edit",
+    "pages/func/dice/dice",
+    "pages/func/random/random",
+    "pages/mine/phone/phone",
+    "pages/mine/record/record",
+    "pages/mine/intro/intro",
+    "pages/mine/feedback/feedback",
+    "pages/mine/setting/setting",
+    "pages/mine/about/about"
+    
+  ],
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00a0e9",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#00a0e9",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/indexSele-blue.png"
+      },
+      {
+        "pagePath": "pages/func/func",
+        "text": "功能",
+        "iconPath": "images/func.png",
+        "selectedIconPath": "images/funcSele-blue.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mineSele-blue.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

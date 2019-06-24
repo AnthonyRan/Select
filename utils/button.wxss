@@ -1,0 +1,20 @@
+/*自定义按钮样式*/
+.btn{
+  color:#ffffff;
+  background-color: #00a0e9;
+
+}
+
+/*按钮点击样式*/
+.btn-hover {
+  color:#c6c6c6;
+  background-color: #0080bb;
+  /* opacity:0.7; */
+}
+
+/*不可点按钮样式，要使用优先级!important*/
+.btn-disabled{
+  color:#c6c6c6 !important;
+  background-color: #00a0e9 !important;
+  opacity:0.5;
+}

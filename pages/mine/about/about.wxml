@@ -1,0 +1,15 @@
+<!--pages/mine/about/about.wxml-->
+<view class='container'>
+<image class='icon' style='margin-top:80rpx;' src="/images/icon.jpg"></image>
+<text class='title' style='margin-top:60rpx;'>SELECT</text>
+<text class='title'>(抽签选择工具)</text>
+<text class='title'>版本号：V1.1.0</text>
+<text class='txt' style='margin-top:60rpx;'>开发团队:</text>
+<text class='txt' space='ensp'>宁  森</text>
+<text class='txt'>李浩然</text>
+<text class='txt'>方潘亮</text>
+<text class='txt'>胡文卿</text>
+<text class='txt' style='margin-top:60rpx;'>联系方式：</text>
+<text class='txt'>QQ：1194544178</text>
+<text class='txt'>Email：nsjim@qq.com</text>
+</view>

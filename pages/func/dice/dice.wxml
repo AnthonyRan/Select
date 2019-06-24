@@ -1,0 +1,12 @@
+<!--pages/func/dice/dice.wxml-->
+<view class="container">
+  <view class="imgBox">
+    <image class="img" src="/images/dice/{{sdice}}.png" mode="widthFix"></image>
+  </view>
+  <view class="btn-area">
+    <button class="btn" hover-class="btn-hover" bindtap="point"> 掷骰子 </button>
+  </view>
+  <view class="textView">
+    <text class="text" wx:if="{{showThis}}">您掷出的数是 {{nowNum}}</text>
+  </view>
+</view>

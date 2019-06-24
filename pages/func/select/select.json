@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "抽签选项",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#f8f8f8"
+}

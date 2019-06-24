@@ -1,0 +1,27 @@
+/* pages/func/select/select.wxss */
+@import "/utils/weui-r.wxss";
+@import "/utils/button.wxss";
+
+page{
+  width:100%;
+  background-color: #f8f8f8;
+}
+
+.page__title {
+  padding-left:15px;
+}
+
+.page__desc {
+  margin-top: .77em;
+  margin-bottom: .3em;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #999999;
+  font-size: 14px;
+}
+.btn-reset{
+  background-color: #ffffff;
+}
+.toptips_info{
+  background-color: #44c4ff;
+}

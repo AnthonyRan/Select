@@ -1,0 +1,78 @@
+<!--pages/func/select/select.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <block>
+            <view class="page__desc">可在选项右侧修改当前选项数量</view>
+            <view class="page__desc">下拉页面刷新，重新加载上次保存的选项信息</view>
+        </block>
+    </view>
+    
+    <view class="page__bd">
+        <view class="weui-toptips toptips_info" wx:if="{{showTopTips_info}}">已重置</view>
+        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips_op}}">至少输入一个选项</view>
+        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">选项不能为空</view>
+        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips_num}}">数量不能为空且必须为整数</view>
+        <view class="weui-cells weui-cells_after-title" style="margin-top:40rpx">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">活动名称：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input bindinput="nameinputchange" class="weui-input" disabled="{{globalDisabled}}" maxlength="10" placeholder="请输入名称" value="{{ac_name}}"></input>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cells__title">抽签选项</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input" style="color:#999;font-size:14px;">
+                <view class="weui-cell__hd" style="width:80px;">
+                    <view class="weui-label">序号</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" disabled="true" value="内容"></input>
+                </view>
+                <view class="weui-cell__ft" style="width:50px;text-align:center;">
+                    <input class="weui-input" disabled="true" maxlength="2" type="number" value="数量"></input>
+                </view>
+                <view class="weui-cell__ft center_view" wx:if="{{!globalDisabled}}">
+                    <button class="weui-btn mini-btn btn-title" disabled="true" size="mini">操作</button>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input" wx:for="{{itemInfo}}" wx:for-item="info" wx:key="{{index}}">
+                <view class="weui-cell__hd" style="width:80px;">
+                    <view class="weui-label">选项{{index+1}}：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input bindinput="inputchange" class="weui-input" data-index="{{index}}" disabled="{{globalDisabled}}" placeholder="请输入内容" value="{{info.text}}"></input>
+                </view>
+                <view class="weui-cell__ft" style="width:50px;text-align:center;">
+                    <input bindinput="opnumschange" class="weui-input" data-index="{{index}}" disabled="{{globalDisabled}}" maxlength="2" placeholder="数量" type="number" value="{{info.num}}"></input>
+                </view>
+                <view class="weui-cell__ft center_view" wx:if="{{!globalDisabled}}">
+                    <button bindtap="deleteOption" class="weui-btn mini-btn" data-index="{{index}}" size="mini" type="default">删除</button>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_link" wx:if="{{!globalDisabled}}">
+                <view bindtap="newOption" class="weui-cell__bd">增加选项</view>
+            </view>
+        </view>
+        <view class="weui-cells__title" style="margin-bottom:0px;">如需选项可被重复抽取，请打开此开关</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_switch">
+                <view class="weui-cell__bd">选项可重复</view>
+                <view class="weui-cell__ft">
+                    <switch color="#00a0e9" bindchange="switchchange" checked="{{repeat}}" disabled="{{globalDisabled}}"></switch>
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-btn-area">
+            <button bindtap="submitBtn" class="btn" style="margin-top:60rpx;" hover-class="btn-hover" disabled="{{globalDisabled}}">开始抽签</button>
+        </view>
+        <view class="weui-btn-area">
+            <button bindtap="resetBtn" class="btn-reset" style="margin-top:40rpx;">重置选项</button>
+        </view>
+    </view>
+</view>

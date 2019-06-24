@@ -1,0 +1,44 @@
+<view class="title">
+<!-- mode="widthFix" 为固定长宽比例的图片-->
+<image src="/images/title.png" class="image" mode="widthFix" ></image>
+</view>
+
+<view class="title">
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="1000"
+circular='true'>   
+   <block wx:for="{{pictures}}" wx:key="key" wx:for-index="index">    
+   <swiper-item>      
+   <image src="{{item}}" class="slide-image" mode="aspectFill"/>    
+   </swiper-item>   
+   </block>     
+</swiper>
+</view>
+
+<view class="user-menu">
+    <view class="item">
+      <navigator url="/pages/mine/intro/intro" class='a'>
+        <image src="/images/intro.jpg" class="btn"></image>
+        <text class="btntxt">使用说明</text>
+      </navigator>
+    </view>
+
+    <view class="item">
+      <navigator url="/pages/func/func" open-type="switchTab" class='a'>
+        <image src="/images/func-btn.jpg" class="btn"></image>
+        <text class="btntxt">功能中心</text>
+      </navigator>
+    </view>
+
+    <view class="item">
+      <navigator url="/pages/mine/mine" open-type="switchTab" class='a'>
+        <image src="/images/mine.jpg" class="btn"></image>
+        <text class="btntxt">个人中心</text>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="title">
+  <text class="text" space="ensp">软件简述:\n    本小程序的功能包括抽签，转盘，掷骰子，随机数等。可以帮您解决日常生活中的选择问题，如聚会选餐，随机任务分配等。高效且环保。\n\n    详细使用说明请查看“首页”-“使用说明”。
+  </text>
+  </view>
+

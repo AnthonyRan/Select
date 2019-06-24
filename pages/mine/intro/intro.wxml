@@ -1,0 +1,110 @@
+<!--pages/mine/intro/intro.wxml-->
+<view>
+  <view class="center">
+    <image class="icon" src="/images/icon.jpg"></image>
+    <view class="page__title">SELECT</view>
+    <view class="page__title">（抽签选择工具）</view>
+    <view class="page__desc"></view>
+  </view>
+
+  <view class="page__bd">
+
+    <view class="weui-article">
+
+      <view class="weui-article__h1">使用说明</view>
+
+      <view class="weui-article__section">
+        <view class="weui-article__title">抽签</view>
+        <view class="weui-article__section">
+          <view class="weui-article__h3">
+            <navigator style="display:inline;text-decoration:underline;" url="/pages/func/select/select">
+              抽签页面
+            </navigator>
+
+          </view>
+          <view class="weui-article__p">1.首先要设置抽签的活动名称，用来标识抽签活动</view>
+          <view class="weui-article__p">2.通过点击“增加选项”新增待抽签的选项</view>
+          <view class="weui-article__p">3.选项后面的数值为当前选项的数量，默认为1，可修改</view>
+          <view class="weui-article__p">4.可通过点击相应选项后的删除按钮，删除当前选项</view>
+          <view class="weui-article__p">5.选项可重复：打开时，每个选项可被重复抽取</view>
+          <view class="weui-article__p">6.抽签按钮：保存选项并前往抽签页面</view>
+          <view class="weui-article__p">7.重置按钮：清除当前页面的选项，重新录入选项</view>
+          <view class="weui-article__p">8.下拉页面：编辑页下拉可重新读取上一次保存的选项和设置，抽签页下拉会清空抽签记录</view>
+          <view class="weui-article__p">8.概率统计：展示每个选项出现的次数，以及在出现的所有结果中所占的比例，可通过点击右侧开关关闭显示结果统计</view>
+        </view>
+      </view>
+
+      <view class="weui-article__section">
+        <view class="weui-article__title">转盘</view>
+        <view class="weui-article__section">
+          <view class="weui-article__h3">
+            <navigator style="display:inline;text-decoration:underline;" url="/pages/func/turntable/list/list">
+              转盘页面
+            </navigator>
+          </view>
+          <view class="weui-article__p">1.页面顶端有热门转盘和创建转盘2个切换按钮，点击可进行切换</view>
+          <view class="weui-article__p">2.热门转盘中，点击对应的列表可以进入转盘，点击列表右侧的下拉箭头可以显示编辑信息</view>
+          <view class="weui-article__p">3.创建转盘中，可以自定义转盘选项</view>
+          <view class="weui-article__p">4.转盘分页中，点击Go可以开始转盘，结果可分享给朋友，点击重置转盘可以重置转盘</view>
+          <view class="weui-article__p">5.编辑：在转盘列表界面中点击列表右侧的下拉箭头可以进行编辑</view>
+          <view class="weui-article__p">6.收藏：在热门转盘中，点击列表上的收藏可以收藏到创建转盘列表中</view>
+        </view>
+      </view>
+
+      <view class="weui-article__section">
+        <view class="weui-article__title">掷骰子</view>
+        <view class="weui-article__section">
+          <view class="weui-article__h3">
+            <navigator style="display:inline;text-decoration:underline;" url="/pages/func/dice/dice">
+              骰子页面
+            </navigator>
+          </view>
+          <view class="weui-article__p">1.点击掷骰子可以对骰子进行投掷</view>
+          <view class="weui-article__p">2.投掷过程中，骰子会转动</view>
+          <view class="weui-article__p">3.投掷成功后会提示成功</view>
+          <view class="weui-article__p">4.投掷成功后，骰子会显示相应的点数，并在下方显示结果文本</view>         
+        </view>
+      </view>
+
+      <view class="weui-article__section">
+        <view class="weui-article__title">随机数</view>
+        <view class="weui-article__section">
+          <view class="weui-article__h3">
+            <navigator style="display:inline;text-decoration:underline;" url="/pages/func/random/random">
+              随机数页面
+            </navigator>
+          </view>
+          <view class="weui-article__p">1.输入最小值和最大值并点击“产生随机数”可以生成随机数</view>
+          <view class="weui-article__p">2.若输入数据符合条件则会弹出提示结果</view>
+          <view class="weui-article__p">3.随机数生成成功后会在下方显示相应的数字图片</view>
+          <view class="weui-article__p">4.生成的随机数范围包括两个端点</view> 
+          <view class="weui-article__p">5.最小值默认为1，最大值默认为100</view>  
+          <view class="weui-article__p">6.目前只能输入正数，并随机生成正整数</view>      
+        </view>
+      </view>
+
+      <view class="weui-article__section">
+        <view class="weui-article__title">个人中心</view>
+        <view class="weui-article__section">
+          <view class="weui-article__p">1.微信登录：点击后会自动获取您的头像和昵称，并显示登陆成功</view>
+          <view class="weui-article__p">2.使用记录：用于保存您的使用信息</view>
+          <view class="weui-article__p">3.使用说明：会跳转到使用说明页面</view>
+          <view class="weui-article__p">4.意见反馈：在其中可以提交各种反馈和您的联系信息，我们会尽快解决</view> 
+          <view class="weui-article__p">5.设置：在其中可以对小程序进行设置，如转盘的声音开关等</view>  
+          <view class="weui-article__p">6.关于：点击会进入“关于我们”页面，其他有小程序的版本号，我们的联系方式等信息</view>      
+        </view>
+      </view>
+
+    </view>
+
+    <view class="weui-article">
+      <view class="weui-article__h1">联系方式</view>
+      <view class="weui-article__section">
+        <view class="weui-article__title">QQ：1194544178</view>
+        <view class="weui-article__title">邮箱：nsjim@qq.com</view>
+        <view class="weui-article__title">如有任何的建议和意见，请在意见反馈页面反馈或与我们联系</view>
+      </view>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,86 @@
+<!--pages/mine/mine.wxml-->
+
+<view class="head">
+    <view class="headIcon" wx:if="{{hasUserInfo && canIUse}}">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="login" wx:if="{{hasUserInfo && canIUse}}">
+      {{userInfo.nickName}}
+    </view>
+    <button class="button" open-type="getUserInfo" wx:if="{{!hasUserInfo && canIUse}}" bindgetuserinfo="getUserInfo"> 微信登录 </button>
+</view>
+
+<view class="hr"></view>
+<!-- <navigator url="/pages/mine/phone/phone">
+<view class='item'>
+  <view class="title">
+    <text>手机绑定</text>
+  </view>
+  <view class="detail2">
+    <text>></text>
+  </view>
+</view>
+</navigator>
+<view class="line"></view> -->
+
+<navigator url="/pages/mine/record/record">
+<view class='item'>
+  <view class="title">
+    <text>使用记录</text>
+  </view>
+  <view class="detail2">
+    <text>></text>
+  </view>
+</view>
+</navigator>
+<view class="line"></view>
+
+<navigator url="/pages/mine/intro/intro">
+<view class='item'>
+  <view class="title">
+    <text>使用说明</text>
+  </view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+</navigator>
+<view class="line"></view>
+
+<navigator url="/pages/mine/feedback/feedback">
+<view class="item">
+  <view class="title">
+    <text>意见反馈</text>
+  </view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+</navigator>
+
+<view class="hr"></view>
+<navigator url="/pages/mine/setting/setting">
+<view class="item">
+  <view class="title">
+    <text>设置</text>
+  </view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+</navigator>
+<view class="line"></view>
+
+<navigator url="/pages/mine/about/about">
+<view class="item">
+  <view class="title">
+    <text>关于</text>
+  </view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+</navigator>
+
+<view class="hr"></view>
+

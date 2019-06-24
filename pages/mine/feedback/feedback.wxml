@@ -1,0 +1,21 @@
+<!--pages/mine/feedback/feedback.wxml-->
+<view class="center">
+  <view class="wrap">
+    <form bindsubmit="formSubmit">
+      <view class="title">意见反馈</view>
+      <view class="contant_wrap">
+        <view class="contant">
+          <textarea class="feedback" name="feedback" value="{{feedback}}" auto-height placeholder-class="placeholder" placeholder="为了带给您更好的体验,请填入您的任何反馈,我们将会不断改进" />
+        </view>
+      </view>
+
+      <view class="title">联系方式</view>
+      <view class="contant_wrap">
+        <view class="contant">
+          <textarea class="contact" name="contact" value="{{contact}}" placeholder-class="placeholder" placeholder="请填入您的手机号或者邮箱,方便我们及时给您回复" />
+        </view>
+      </view>
+      <button class="btn" style="margin-top:80rpx;" formType="submit" hover-class="btn-hover" loading="{{loading}}">提交</button>
+    </form>
+  </view>
+</view>
